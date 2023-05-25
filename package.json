@@ -1,0 +1,42 @@
+{
+  "name": "secure-cash-center",
+  "author": "Your Name",
+  "license": "ISC",
+  "version": "1.0.0",
+  "description": "A simple Node.js app using TypeScript",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start:test": "ts-node ./src/test/test.ts",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "compile": "tsc",
+    "test": "node node_modules/ts-node/dist/bin.js src/test/test.ts",
+    "watch": "nodemon --watch '*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "watch-test": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/test/test.ts",
+    "lint": "eslint **/*.ts"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.18.30",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.5.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
